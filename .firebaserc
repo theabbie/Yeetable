@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "codrcrew"
+  },
+  "targets": {
+    "codrcrew": {
+      "hosting": {
+        "theabbie": [
+          "theabbie"
+        ]
+      }
+    }
   }
 }
