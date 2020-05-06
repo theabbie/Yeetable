@@ -2,6 +2,10 @@
   "hosting": {
     "target": "theabbie",
     "public": "public",
+    "rewrites": [ {
+    "source": "/api",
+    "function": "api"
+    }]
     "ignore": [
       "firebase.json",                                              "**/.*",
       "**/node_modules/**"
