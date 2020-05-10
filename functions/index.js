@@ -28,5 +28,5 @@ res.send("");
 }).catch((error) => {
 res.end("error");
 });
-})
+});
 });
