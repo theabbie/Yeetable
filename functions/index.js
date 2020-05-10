@@ -30,3 +30,26 @@ res.end();
 res.end("error")
 });
 });
+
+exports.post = functions.https.onRequest((req, res) => {
+ res.setHeader('Access-Control-Allow-Origin', '*');
+    const response = req.query.response;
+    rp({
+        uri: 'https://recaptcha.google.com/recaptcha/api/siteverify',
+        method: 'POST',
+        formData: {
+            secret: '6LdVTvUUAAAAAKYlRwVcunEBgzN1HsyJmCl22YWG',
+            response: response
+        },
+        json: true
+    }).then(result => {
+        if (result.success) {
+            res.send("You're good to go, human.")
+        }
+        else {
+            res.send("Recaptcha verification failed. Are you a robot?")
+        }
+    }).catch(reason => {
+        res.send("Recaptcha request failed.")
+    })
+});
