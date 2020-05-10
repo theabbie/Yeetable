@@ -24,9 +24,8 @@ var message = {
    }
 }
 admin.messaging().send(message).then((response) => {
-res.send("");
+res.end();
 }).catch((error) => {
-res.end("error");
-});
+res.end("error")
 });
 });
