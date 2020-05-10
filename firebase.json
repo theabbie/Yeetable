@@ -2,9 +2,12 @@
   "hosting": {
     "target": "theabbie",
     "public": "public",
-    "rewrites": [ {
-    "source": "/api",
-    "function": "api"
+    "rewrites": [{
+    "source": "/subscribe",
+    "function": "subscribe"
+    },{
+    "source": "/send",
+    "function": "send"
     }],
     "ignore": [
       "firebase.json",                                              "**/.*",
