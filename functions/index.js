@@ -1,5 +1,6 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
+const rp = require('request-promise');
 admin.initializeApp();
 
 exports.subscribe = functions.https.onRequest((req, res) => {
