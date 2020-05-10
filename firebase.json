@@ -8,6 +8,9 @@
     },{
     "source": "/send",
     "function": "send"
+    },{
+    "source": "/post",
+    "function": "post"
     }],
     "ignore": [
       "firebase.json",                                              "**/.*",
