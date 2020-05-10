@@ -3,5 +3,6 @@ const admin = require('firebase-admin');
 admin.initializeApp();
 
 exports.api = functions.https.onRequest((req, res) => {
+ res.setHeader('Access-Control-Allow-Origin', '*');
  admin.messaging().subscribeToTopic([req.query.token], "push").then(function(x) {res.send("")}).catch(function(error) {res.send(error)});
 });
