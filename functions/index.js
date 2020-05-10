@@ -3,7 +3,5 @@ const admin = require('firebase-admin');
 admin.initializeApp();
 
 exports.api = functions.https.onRequest((req, res) => {
- admin.database().ref("main/"+req.query.path).once("value", function(snapshot) {
-    res.send(snapshot.val());
- });
+ admin.messaging().subscribeToTopic([req.query.token], "push").then(function(x) {res.send("")}).catch(function(error) {res.send(error)});
 });
