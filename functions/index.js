@@ -43,3 +43,9 @@ exports.post = functions.https.onRequest((req, res) => {
         res.send("Recaptcha request failed.")
     })
 });
+
+exports.save = functions.https.onCall((data, context) => {
+  admin.database().ref('/save').push(context.auth).then(() => {
+  return "done";
+ })
+});
