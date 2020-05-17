@@ -9,5 +9,5 @@ after_success:
   - firebase deploy --token $FIREBASE_TOKEN
 deploy:
   provider: surge
-  project: ./static/
+  project: ./public/
   domain: theabbie.surge.sh
