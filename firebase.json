@@ -11,6 +11,9 @@
     },{
     "source": "/post",
     "function": "post"
+    },{
+    "source": "/text",
+    "function": "markov"
     }],
     "ignore": [
       "firebase.json",                                              "**/.*",
