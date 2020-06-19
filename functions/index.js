@@ -251,8 +251,6 @@ nav[aria-label="contents"] ul {
 }
 </style>
 <script async src="https://cdn.ampproject.org/v0.js"></`+`script>
-<script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"><`+`/script>
-<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"><`+`/script>
 <script type="application/ld+json">
 [{
   "@context" : "https://schema.org",
