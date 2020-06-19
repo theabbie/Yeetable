@@ -361,7 +361,7 @@ ${title}
 <h2 id="one">${sec1}</h2>
 <p>${make_title(70)}</p>
 <figure>
-<amp-img src="https://picsum.photos/400/300" width="400" height="300" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec1}"></amp-img>
+<amp-img src="https://picsum.photos/450/300" width="450" height="300" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec1}"></amp-img>
 <figcaption>${sec1}</figcaption>
 </figure>
 <p>${make_title(70)}</p>
@@ -370,7 +370,7 @@ ${title}
 <h2 id="two">${sec2}</h2>
 <p>${make_title(70)}</p>
 <figure>
-<amp-img src="https://picsum.photos/450/300" width="450" height="300" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec2}"></amp-img>
+<amp-img src="https://picsum.photos/500/350" width="500" height="350" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec2}"></amp-img>
 <figcaption>${sec2}</figcaption>
 </figure>
 <p>${make_title(70)}</p>
@@ -379,7 +379,7 @@ ${title}
 <h2 id="three">${sec3}</h2>
 <p>${make_title(70)}</p>
 <figure>
-<amp-img src="https://picsum.photos/500/350" width="500" height="350" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec3}"></amp-img>
+<amp-img src="https://picsum.photos/550/350" width="550" height="350" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec3}"></amp-img>
 <figcaption>${sec3}</figcaption>
 </figure>
 <p>${make_title(70)}</p>
