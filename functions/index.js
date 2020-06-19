@@ -105,6 +105,9 @@ var make_title = function(min_length) {
 };
 
 var desc = make_title(32);
+var sec1 = make_title(5);
+var sec2 = make_title(5);
+var sec3 = make_title(5);
 
 var code = `<!doctype html>
 <html ⚡ lang="en">
@@ -344,13 +347,41 @@ ${title}
 </aside>
 <p><i>${desc}</i></p>
 <figure>
-<amp-img src="https://picsum.photos/400/300" width="400" height="300" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="sample image"></amp-img>
+<amp-img src="https://picsum.photos/400/300" width="400" height="300" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${title}"></amp-img>
 <figcaption>${title}</figcaption>
 </figure>
+<nav aria-label="contents">
+<ul>
+<li><a href="#one">${sec1}</a></li>
+<li><a href="#two">${sec2}</a></li>
+<li><a href="#three">${sec3}</a></li>
+</ul>
+</nav>
 <section>
-<h2>${make_title(7)}</h2>
+<h2 id="one">${sec1}</h2>
 <p>${make_title(70)}</p>
+<figure>
+<amp-img src="https://picsum.photos/400/300" width="400" height="300" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec1}"></amp-img>
+<figcaption>${sec1}</figcaption>
+</figure>
 <p>${make_title(70)}</p>
+</section>
+<section>
+<h2 id="two">${sec2}</h2>
+<p>${make_title(70)}</p>
+<figure>
+<amp-img src="https://picsum.photos/450/300" width="450" height="300" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec2}"></amp-img>
+<figcaption>${sec2}</figcaption>
+</figure>
+<p>${make_title(70)}</p>
+</section>
+<section>
+<h2 id="three">${sec3}</h2>
+<p>${make_title(70)}</p>
+<figure>
+<amp-img src="https://picsum.photos/500/350" width="500" height="350" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec3}"></amp-img>
+<figcaption>${sec3}</figcaption>
+</figure>
 <p>${make_title(70)}</p>
 </section>
 </article>
