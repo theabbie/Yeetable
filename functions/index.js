@@ -88,6 +88,306 @@ var make_title = function(min_length) {
     return title.join(" ")
 };
 
-res.end(make_title(100));
+var title = make_title(12);
+var desc = make_title(32);
+var kwds = title.split(" ").join(",");
+
+var code = `<!doctype html>
+<html ⚡ lang="en">
+<head>
+<title>
+${title}
+</title>
+<meta charset="utf-8" />
+<link rel="canonical" href="/text">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="${title}" />
+<meta property="og:description" content="${desc}" />
+<meta name="keywords" content="${kwds}" />
+<meta name="news_keywords" content="${kwds}" />
+<meta name="Author" content="Abhishek Chaudhary">
+<meta name="language" content="English">
+<meta property="og:url" content="https://theabbie.web.app/text" />
+<meta property="og:site_name" content="TheAbbie" />
+${(function() {
+return kwds.split(",").map(x=>`<meta property="article:tag" content="${x.trim()}" />
+`).join("");
+})()}
+<meta property="fb:app_id" content="773417293013792" />
+<meta property="article:section" content="Review" />
+<meta property="article:published_time" content="2020-04-22T08:34:48+00:00" />
+<meta property="article:modified_time" content="2020-04-22T08:34:51+00:00" />
+<meta property="og:updated_time" content="2020-04-22T08:34:51+00:00" />
+<meta property="og:image" content="https://theabbie.github.io/files/collage.jpg" />
+<meta property="og:image:secure_url" content="https://theabbie.github.io/files/collage.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="445" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="${desc}" />
+<meta name="twitter:title" content="${title}" />
+<meta name="twitter:image" content="https://theabbie.github.io/files/collage.jpg" />
+<link rel="manifest" href="/manifest.json">
+<link rel="alternate" type="application/rss+xml" title="TheAbbie Blog" href="https://theabbie.github.io/rss.xml" />
+<link rel="me" href="mailto:abhishek7gg7@gmail.com" />
+<link rel="me" href="sms:+918928412138" />
+<link rel="apple-touch-icon" sizes="180x180" href="/files/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/files/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="194x194" href="/files/favicons/favicon-194x194.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/files/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/files/favicons/favicon-16x16.png">
+<link rel="mask-icon" href="/files/favicons/safari-pinned-tab.svg" color="#000000">
+<link rel="shortcut icon" href="/files/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="/files/favicons/mstile-144x144.png">
+<meta name="msapplication-config" content="/files/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<style amp-custom>
+@font-face {
+  font-family: 'Martel Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Martel Sans Regular'), local('MartelSans-Regular'), url(https://fonts.gstatic.com/s/martelsans/v6/h0GsssGi7VdzDgKjM-4d8hjYx-4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+* {font-family: 'Martel Sans';}
+html {
+scroll-behavior: smooth;
+}
+h1 {
+padding-left: 15px;
+padding-right: 15px;
+margin-bottom: 0px;
+padding-bottom: 0px;
+}
+h2 {
+padding-left: 19px;
+padding-right: 15px;
+}
+h2.subtitle {
+text-decoration: none;
+font-weight: normal;
+font-style: italic;
+font-size: 20px;
+}
+h3 {
+padding-left: 22px;
+padding-right: 15px;
+}
+h4,h5,h6 {
+padding-left: 24px;
+padding-right: 15px;
+}
+p,address {
+padding-left: 28px;
+padding-right: 15px;
+}
+h1 {
+font-weight: 100;
+}
+a {
+text-decoration: none;
+color: #0275d8;
+}
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "${"\/\\00a0"}";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+amp-img, amp-youtube, amp-iframe {
+  margin: auto;
+}
+figcaption {
+  text-align: center;
+  padding: 12px;
+}
+table {
+  font-size: 18px;
+  border-collapse: collapse;
+  width: 75%;
+  max-width: 500px;
+  margin: 50px auto 50px auto;
+}
+th {
+  font-size: 25px;
+}
+tr {
+  border-bottom: 1px solid rgba(50,50,50,0.3);
+}
+td {
+  text-align: center;
+  padding: 10px;
+}
+section {
+  padding-right: 15px;
+}
+caption {
+  font-weight: bolder;
+  padding-top: 20px;
+  caption-side: bottom;
+}
+nav[aria-label="contents"] ul {
+  padding-right: 20px;
+}
+</style>
+<script async src="https://cdn.ampproject.org/v0.js"></`+`script>
+<script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"><`+`/script>
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"><`+`/script>
+<script type="application/ld+json">
+[{
+  "@context" : "https://schema.org",
+  "@type" : "WebPage",
+  "name" : "${title}",
+  "description" : "${desc}",
+  "keywords" : "${kwds}",
+  "speakable" : {
+    "@type" : "SpeakableSpecification",
+    "cssSelector" : "[${title}, ${desc}]"
+  },
+  "url" : "https://theabbie.web.app/text"
+},{
+ "@context": "https://schema.org", 
+ "@type": "Article",
+ "headline": "${title}",
+ "alternativeHeadline": "${title} | TheAbbie",
+ "image": "https://theabbie.github.io/files/collage.jpg",
+ "author": "Abhishek Chaudhary", 
+ "editor": "Abhishek Chaudhary", 
+ "genre": "Technology", 
+ "keywords": "${kwds}", 
+ "wordcount": "1120",
+ "publisher": {
+    "@type": "Organization",
+    "name": "TheAbbie",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://theabbie.github.io/files/logo.png"
+    }
+  },
+ "url": "https://theabbie.web.app/text",
+   "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://theabbie.web.app/text"
+  },
+ "datePublished": "${new Date().toISOString()}",
+ "dateCreated": "${new Date().toISOString()}",
+ "dateModified": "${new Date().toISOString()}",
+ "description": "${desc}",
+ "articleBody": "${desc}"
+ },{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://theabbie.web.app"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "${title}"
+      }]
+    },{
+  "@context":"http://schema.org",
+   "@type":"NewsArticle",
+   "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://theabbie.web.app/text"
+   },
+   "isPartOf":{
+      "@type":"CreativeWork",
+      "name":"TheAbbie",
+      "url":"https://theabbie.web.app"
+   },
+   "inLanguage":"en",
+   "headline":"${title}",
+   "description":"${desc}",
+   "keywords":"${kwds}",
+   "articleSection":"Blog",
+   "url":"https://theabbie.web.app/text",
+   "image":"https://theabbie.github.io/files/collage.jpg",
+   "datePublished":"${new Date().toISOString()}",
+   "dateModified":"${new Date().toISOString()}",
+   "articleBody":"${desc}",
+   "author":{
+      "@type":"Person",
+      "name":"Abhishek Chaudhary",
+      "image":"https://theabbie.github.io/files/abhishek-chaudhary.jpg",
+     "url":"https://theabbie.github.io/abhishek-chaudhary"
+   },
+   "publisher":{
+      "@type":"NewsMediaOrganization",
+      "name":"TheAbbie Blog",
+      "url":"https://theabbie.github.io/",
+      "logo":{
+           "@type":"ImageObject",
+           "url":"https://theabbie.github.io/files/logo.png",
+         "width":512,
+         "height":512
+      }
+   },
+   "associatedMedia":{
+      "@type":"imageObject",
+      "url":"https://theabbie.github.io/files/collage.jpg",
+      "caption":"${title}",
+      "description":"${desc}",
+      "height":"600",
+      "width":"445"
+   }
+}]
+</`+`script>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+<body>
+<header>
+<nav aria-label="breadcrumb">
+<ul class="breadcrumb">
+  <li><a href="https://theabbie.web.app">Home</a></li>
+  <li>${title}</li>
+</ul>
+</nav>
+</header>
+<main>
+<article>
+<h1>
+${title}
+</h1>
+<aside>
+<p>By <a href="mailto:abhishek7gg7@gmail.com" rel="author">Abhishek Chaudhary</a></p>
+<p><strong>Published</strong> ${new Date().toISOString().split("T")[0]}</p>
+</aside>
+<p><i>${desc}</i></p>
+<section>
+<h2>${make_title(7)}</h2>
+<p>${make_title(70)}</p>
+<p>${make_title(70)}</p>
+<p>${make_title(70)}</p>
+</section>
+</article>
+</main>
+</body>
+</html>
+`;
+
+res.status(200).send(code);
 
 });
