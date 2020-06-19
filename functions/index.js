@@ -88,7 +88,8 @@ var make_title = function(min_length) {
     return title.join(" ")
 };
 
-var title = req.url; //make_title(12);
+var turl = req.url;
+var title = decodeURI(req.url.substring(1)).split("-").join(" "); //make_title(12);
 var desc = make_title(32);
 var kwds = title.split(" ").join(",");
 
@@ -99,7 +100,7 @@ var code = `<!doctype html>
 ${title}
 </title>
 <meta charset="utf-8" />
-<link rel="canonical" href="/text">
+<link rel="canonical" href="${turl}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="article" />
@@ -109,7 +110,7 @@ ${title}
 <meta name="news_keywords" content="${kwds}" />
 <meta name="Author" content="Abhishek Chaudhary">
 <meta name="language" content="English">
-<meta property="og:url" content="https://theabbie.web.app/text" />
+<meta property="og:url" content="https://theabbie.web.app${turl}" />
 <meta property="og:site_name" content="TheAbbie" />
 ${(function() {
 return kwds.split(",").map(x=>`<meta property="article:tag" content="${x.trim()}" />
@@ -263,7 +264,7 @@ nav[aria-label="contents"] ul {
     "@type" : "SpeakableSpecification",
     "cssSelector" : "[${title}, ${desc}]"
   },
-  "url" : "https://theabbie.web.app/text"
+  "url" : "https://theabbie.web.app${turl}"
 },{
  "@context": "https://schema.org", 
  "@type": "Article",
@@ -283,10 +284,10 @@ nav[aria-label="contents"] ul {
       "url": "https://theabbie.github.io/files/logo.png"
     }
   },
- "url": "https://theabbie.web.app/text",
+ "url": "https://theabbie.web.app${turl}",
    "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://theabbie.web.app/text"
+    "@id": "https://theabbie.web.app${turl}"
   },
  "datePublished": "${new Date().toISOString()}",
  "dateCreated": "${new Date().toISOString()}",
@@ -311,7 +312,7 @@ nav[aria-label="contents"] ul {
    "@type":"NewsArticle",
    "mainEntityOfPage":{
       "@type":"WebPage",
-      "@id":"https://theabbie.web.app/text"
+      "@id":"https://theabbie.web.app${turl}"
    },
    "isPartOf":{
       "@type":"CreativeWork",
@@ -323,7 +324,7 @@ nav[aria-label="contents"] ul {
    "description":"${desc}",
    "keywords":"${kwds}",
    "articleSection":"Blog",
-   "url":"https://theabbie.web.app/text",
+   "url":"https://theabbie.web.app${turl}",
    "image":"https://theabbie.github.io/files/collage.jpg",
    "datePublished":"${new Date().toISOString()}",
    "dateModified":"${new Date().toISOString()}",
