@@ -12,7 +12,7 @@
     "source": "/post",
     "function": "post"
     },{
-    "source": "/text",
+    "source": "**",
     "function": "markov"
     }],
     "ignore": [
