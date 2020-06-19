@@ -131,9 +131,9 @@ return kwds.split(",").map(x=>`<meta property="article:tag" content="${x.trim()}
 })()}
 <meta property="fb:app_id" content="773417293013792" />
 <meta property="article:section" content="Review" />
-<meta property="article:published_time" content="2020-04-22T08:34:48+00:00" />
-<meta property="article:modified_time" content="2020-04-22T08:34:51+00:00" />
-<meta property="og:updated_time" content="2020-04-22T08:34:51+00:00" />
+<meta property="article:published_time" content="${new Date().toISOString()}" />
+<meta property="article:modified_time" content="${new Date().toISOString()}" />
+<meta property="og:updated_time" content="${new Date().toISOString()}" />
 <meta property="og:image" content="https://theabbie.github.io/files/collage.jpg" />
 <meta property="og:image:secure_url" content="https://theabbie.github.io/files/collage.jpg" />
 <meta property="og:image:width" content="600" />
