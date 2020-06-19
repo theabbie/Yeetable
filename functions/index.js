@@ -318,54 +318,7 @@ nav[aria-label="contents"] ul {
         "position": 2,
         "name": "${title}"
       }]
-    },{
-  "@context":"http://schema.org",
-   "@type":"NewsArticle",
-   "mainEntityOfPage":{
-      "@type":"WebPage",
-      "@id":"https://theabbie.web.app${turl}"
-   },
-   "isPartOf":{
-      "@type":"CreativeWork",
-      "name":"TheAbbie",
-      "url":"https://theabbie.web.app"
-   },
-   "inLanguage":"en",
-   "headline":"${title}",
-   "description":"${desc}",
-   "keywords":"${kwds}",
-   "articleSection":"Blog",
-   "url":"https://theabbie.web.app${turl}",
-   "image":"https://theabbie.github.io/files/collage.jpg",
-   "datePublished":"${new Date().toISOString()}",
-   "dateModified":"${new Date().toISOString()}",
-   "articleBody":"${desc}",
-   "author":{
-      "@type":"Person",
-      "name":"Abhishek Chaudhary",
-      "image":"https://theabbie.github.io/files/abhishek-chaudhary.jpg",
-     "url":"https://theabbie.github.io/abhishek-chaudhary"
-   },
-   "publisher":{
-      "@type":"NewsMediaOrganization",
-      "name":"TheAbbie Blog",
-      "url":"https://theabbie.github.io/",
-      "logo":{
-           "@type":"ImageObject",
-           "url":"https://theabbie.github.io/files/logo.png",
-         "width":512,
-         "height":512
-      }
-   },
-   "associatedMedia":{
-      "@type":"imageObject",
-      "url":"https://theabbie.github.io/files/collage.jpg",
-      "caption":"${title}",
-      "description":"${desc}",
-      "height":"600",
-      "width":"445"
-   }
-}]
+    }]
 </`+`script>
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 </head>
@@ -388,6 +341,10 @@ ${title}
 <p><strong>Published</strong> ${new Date().toISOString().split("T")[0]}</p>
 </aside>
 <p><i>${desc}</i></p>
+<figure>
+<amp-img src="https://picsum.photos/400/300" width="400" height="300" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="sample image"></amp-img>
+<figcaption>${title}</figcaption>
+</figure>
 <section>
 <h2>${make_title(7)}</h2>
 <p>${make_title(70)}</p>
