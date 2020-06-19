@@ -88,7 +88,7 @@ var make_title = function(min_length) {
     return title.join(" ")
 };
 
-var title = make_title(12);
+var title = req.url; //make_title(12);
 var desc = make_title(32);
 var kwds = title.split(" ").join(",");
 
