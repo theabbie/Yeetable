@@ -12,6 +12,9 @@
     "source": "/post",
     "function": "post"
     },{
+    "source": "/**.svg",
+    "function": "img"
+    },{
     "source": "**",
     "function": "markov"
     }],
