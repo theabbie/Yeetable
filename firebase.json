@@ -12,7 +12,7 @@
     "source": "/post",
     "function": "post"
     },{
-    "source": "/**.svg",
+    "source": "**/*.svg",
     "function": "img"
     },{
     "source": "**",
