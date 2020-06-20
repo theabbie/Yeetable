@@ -53,6 +53,16 @@ exports.save = functions.https.onCall((data, context) => {
 
 exports.markov = functions.https.onRequest((req, res) => {
 
+var title = url.parse(req.url,true).pathname.replace(/^\/+|\/+$/g, '').split(/\/+/g).reverse()[0].split("-").join(" ").split(".")[0];
+
+res.send(`<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<text x="20" y="40" style="font-family: Arial; font-size: 34; stroke: #000000; fill: #00ff00;">${title}</text>
+</svg>`);
+
+});
+
+exports.markov = functions.https.onRequest((req, res) => {
+
 var u = url.parse(req.url,true);
 var turl = u.pathname.replace(/^\/+|\/+$/g, '').replace(/\/+/g,'/');
 var seg = turl.split('/');
