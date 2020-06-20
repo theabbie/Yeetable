@@ -321,9 +321,17 @@ nav[aria-label="contents"] ul {
         "position": 1,
         "name": "Home",
         "item": "https://theabbie.web.app"
-      },{
+      },${(function() {
+return seg.slice(0,seg.length-1).map((x,i)=>`{
         "@type": "ListItem",
-        "position": 2,
+        "position": ${i+2},
+        "name": "${x.split("-").join(" ")}",
+        "item": "https://theabbie.web.app#${x}"
+      },
+`).join("");
+})()}{
+        "@type": "ListItem",
+        "position": ${seg.length},
         "name": "${title}"
       }]
     }]
@@ -334,8 +342,12 @@ nav[aria-label="contents"] ul {
 <header>
 <nav aria-label="breadcrumb">
 <ul class="breadcrumb">
-  <li><a href="https://theabbie.web.app">Home</a></li>
-  <li>${title}</li>
+<li><a href="https://theabbie.web.app">Home</a></li>
+${(function() {
+return seg.slice(0,seg.length-1).map(x=>`<li><a href="https://theabbie.web.app#${x}">${x.split("-").join(" ")}</a></li>
+`).join("");
+})()}  
+<li>${title}</li>
 </ul>
 </nav>
 </header>
