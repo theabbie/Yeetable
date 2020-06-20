@@ -134,8 +134,7 @@ ${title}
 ${(function() {
 return kwds.split(",").map(x=>`<meta property="article:tag" content="${x.trim()}" />
 `).join("");
-})()}
-<meta property="fb:app_id" content="773417293013792" />
+})()}<meta property="fb:app_id" content="773417293013792" />
 <meta property="article:section" content="Review" />
 <meta property="article:published_time" content="${new Date().toISOString()}" />
 <meta property="article:modified_time" content="${new Date().toISOString()}" />
@@ -331,7 +330,7 @@ return seg.slice(0,seg.length-1).map((x,i)=>`{
 `).join("");
 })()}{
         "@type": "ListItem",
-        "position": ${seg.length},
+        "position": ${seg.length+1},
         "name": "${title}"
       }]
     }]
@@ -346,8 +345,7 @@ return seg.slice(0,seg.length-1).map((x,i)=>`{
 ${(function() {
 return seg.slice(0,seg.length-1).map(x=>`<li><a href="https://theabbie.web.app#${x}">${x.split("-").join(" ")}</a></li>
 `).join("");
-})()}  
-<li>${title}</li>
+})()}<li>${title}</li>
 </ul>
 </nav>
 </header>
