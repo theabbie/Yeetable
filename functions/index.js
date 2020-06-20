@@ -55,8 +55,8 @@ exports.img = functions.https.onRequest((req, res) => {
 
 var title = url.parse(req.url,true).pathname.replace(/^\/+|\/+$/g, '').split(/\/+/g).reverse()[0].split("-").join(" ").split(".")[0];
 
-res.type("image/svg+xml").end(`<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<text x="20" y="40" style="font-family: Arial; font-size: 34; stroke: #000000; fill: #00ff00;">${title}</text>
+res.type("image/svg+xml").end(`<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="627">
+<text x="50%" y="50%" style="font-family: Arial; font-size: 34; stroke: #000000; fill: #000000;">${title}</text>
 </svg>`);
 
 });
@@ -153,14 +153,14 @@ return kwds.split(",").map(x=>`<meta property="article:tag" content="${x.trim()}
 <meta property="article:published_time" content="${new Date().toISOString()}" />
 <meta property="article:modified_time" content="${new Date().toISOString()}" />
 <meta property="og:updated_time" content="${new Date().toISOString()}" />
-<meta property="og:image" content="https://theabbie.github.io/files/collage.jpg" />
-<meta property="og:image:secure_url" content="https://theabbie.github.io/files/collage.jpg" />
-<meta property="og:image:width" content="600" />
-<meta property="og:image:height" content="445" />
+<meta property="og:image" content="https://theabbie.web.app/${turl}.svg" />
+<meta property="og:image:secure_url" content="https://theabbie.web.app/${turl}.svg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="627" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:description" content="${desc}" />
 <meta name="twitter:title" content="${title}" />
-<meta name="twitter:image" content="https://theabbie.github.io/files/collage.jpg" />
+<meta name="twitter:image" content="https://theabbie.web.app/${turl}.svg" />
 <!-- 
 <link rel="manifest" href="/manifest.json">
 <link rel="alternate" type="application/rss+xml" title="TheAbbie Blog" href="https://theabbie.github.io/rss.xml" />
@@ -302,7 +302,7 @@ nav[aria-label="contents"] ul {
  "@type": "Article",
  "headline": "${title}",
  "alternativeHeadline": "${title} | TheAbbie",
- "image": "https://theabbie.github.io/files/collage.jpg",
+ "image": "https://theabbie.web.app/${turl}.svg",
  "author": "Abhishek Chaudhary", 
  "editor": "Abhishek Chaudhary", 
  "genre": "Technology", 
