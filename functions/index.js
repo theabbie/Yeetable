@@ -51,7 +51,7 @@ exports.save = functions.https.onCall((data, context) => {
  })
 });
 
-exports.markov = functions.https.onRequest((req, res) => {
+exports.img = functions.https.onRequest((req, res) => {
 
 var title = url.parse(req.url,true).pathname.replace(/^\/+|\/+$/g, '').split(/\/+/g).reverse()[0].split("-").join(" ").split(".")[0];
 
