@@ -54,8 +54,8 @@ exports.save = functions.https.onCall((data, context) => {
 exports.markov = functions.https.onRequest((req, res) => {
 
 var u = url.parse(req.url,true);
-var turl = u.pathname;
-var seg = turl.replace(/^\|+|\|+$/g, '').split(/\/+/g);
+var turl = u.pathname.replace(/^\/+|\/+$/g, '').replace(/\/+/g,'/');
+var seg = turl.split('/');
 var title = seg[seg.length-1].split("-").join(" "); //make_title(12);
 var kwds = title.split(" ").join(",");
 
@@ -119,7 +119,7 @@ var code = `<!doctype html>
 ${title}
 </title>
 <meta charset="utf-8" />
-<link rel="canonical" href="${turl}">
+<link rel="canonical" href="/${turl}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="article" />
@@ -129,7 +129,7 @@ ${title}
 <meta name="news_keywords" content="${kwds}" />
 <meta name="Author" content="Abhishek Chaudhary">
 <meta name="language" content="English">
-<meta property="og:url" content="https://theabbie.web.app${turl}" />
+<meta property="og:url" content="https://theabbie.web.app/${turl}" />
 <meta property="og:site_name" content="TheAbbie" />
 ${(function() {
 return kwds.split(",").map(x=>`<meta property="article:tag" content="${x.trim()}" />
@@ -283,7 +283,7 @@ nav[aria-label="contents"] ul {
     "@type" : "SpeakableSpecification",
     "cssSelector" : "[${title}, ${desc}]"
   },
-  "url" : "https://theabbie.web.app${turl}"
+  "url" : "https://theabbie.web.app/${turl}"
 },{
  "@context": "https://schema.org", 
  "@type": "Article",
@@ -303,10 +303,10 @@ nav[aria-label="contents"] ul {
       "url": "https://theabbie.github.io/files/logo.png"
     }
   },
- "url": "https://theabbie.web.app${turl}",
+ "url": "https://theabbie.web.app$/{turl}",
    "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://theabbie.web.app${turl}"
+    "@id": "https://theabbie.web.app/${turl}"
   },
  "datePublished": "${new Date().toISOString()}",
  "dateCreated": "${new Date().toISOString()}",
