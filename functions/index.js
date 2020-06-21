@@ -56,7 +56,7 @@ exports.img = functions.https.onRequest((req, res) => {
 
 var title = url.parse(req.url,true).pathname.replace(/^\/+|\/+$/g, '').split(/\/+/g).reverse()[0].split("-").join(" ").split(".")[0];
 
-tti.generate(title,{maxWidth: 1200, customHeight: 627}).then(function (uri) {
+tti.generate(title,{maxWidth: 1200, customHeight: 627, fontSize: 75, margin: 50}).then(function (uri) {
   res.type("image/png").end(Buffer.from(uri.split('base64,')[1],'base64'));
 });
 
