@@ -167,16 +167,14 @@ return kwds.split(",").map(x=>`<meta property="article:tag" content="${x.trim()}
 -->
 <link rel="me" href="mailto:abhishek7gg7@gmail.com" />
 <link rel="me" href="sms:+918928412138" />
-<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="194x194" href="/favicons/favicon-194x194.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#000000">
-<link rel="shortcut icon" href="/favicons/favicon.ico">
-<meta name="msapplication-TileColor" content="#000000">
-<meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
-<meta name="msapplication-config" content="/favicons/browserconfig.xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#000000">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 <style amp-custom>
 @font-face {
