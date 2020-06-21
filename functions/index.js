@@ -56,8 +56,8 @@ exports.img = functions.https.onRequest((req, res) => {
 
 var title = url.parse(req.url,true).pathname.replace(/^\/+|\/+$/g, '').split(/\/+/g).reverse()[0].split("-").join(" ").split(".")[0];
 
-tti.generate(title).then(function (dataUri) {
-  res.end(dataUri);
+tti.generate(title,{maxWidth: 1200, customHeight: 627}).then(function (uri) {
+  res.type("image/png").end(Buffer.from(uri.split('base64,')[1],'base64'));
 });
 
 /*res.type("image/svg+xml").end(`<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="627">
