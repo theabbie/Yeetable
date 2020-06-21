@@ -162,14 +162,14 @@ return kwds.split(",").map(x=>`<meta property="article:tag" content="${x.trim()}
 <meta property="article:published_time" content="${new Date().toISOString()}" />
 <meta property="article:modified_time" content="${new Date().toISOString()}" />
 <meta property="og:updated_time" content="${new Date().toISOString()}" />
-<meta property="og:image" content="${host}/${turl}.svg" />
-<meta property="og:image:secure_url" content="${host}/${turl}.svg" />
+<meta property="og:image" content="${host}/${turl}.png" />
+<meta property="og:image:secure_url" content="${host}/${turl}.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="627" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:description" content="${desc}" />
 <meta name="twitter:title" content="${title}" />
-<meta name="twitter:image" content="${host}/${turl}.svg" />
+<meta name="twitter:image" content="${host}/${turl}.png" />
 <!-- 
 <link rel="manifest" href="/manifest.json">
 <link rel="alternate" type="application/rss+xml" title="TheAbbie Blog" href="https://theabbie.github.io/rss.xml" />
@@ -308,8 +308,8 @@ nav[aria-label="contents"] ul {
  "@context": "https://schema.org", 
  "@type": "Article",
  "headline": "${title}",
- "alternativeHeadline": "${title} | TheAbbie",
- "image": "${host}/${turl}.svg",
+ "alternativeHeadline": "${title} | ${name}",
+ "image": "${host}/${turl}.png",
  "author": "Abhishek Chaudhary", 
  "editor": "Abhishek Chaudhary", 
  "genre": "Technology", 
