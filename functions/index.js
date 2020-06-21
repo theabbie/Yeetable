@@ -63,6 +63,8 @@ res.type("image/svg+xml").end(`<svg xmlns="http://www.w3.org/2000/svg" xmlns:xli
 
 exports.markov = functions.https.onRequest((req, res) => {
 
+var host = "https://yeetable.tk";
+var name = "Yeetable";
 var u = url.parse(req.url,true);
 var turl = u.pathname.replace(/^\/+|\/+$/g, '').replace(/\/+/g,'/');
 var seg = turl.split('/');
@@ -135,7 +137,7 @@ var code = `<!doctype html>
 ${title}
 </title>
 <meta charset="utf-8" />
-<link rel="canonical" href="/${turl}">
+<link rel="canonical" href="${host}/${turl}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="article" />
@@ -145,8 +147,8 @@ ${title}
 <meta name="news_keywords" content="${kwds}" />
 <meta name="Author" content="Abhishek Chaudhary">
 <meta name="language" content="English">
-<meta property="og:url" content="https://theabbie.web.app/${turl}" />
-<meta property="og:site_name" content="TheAbbie" />
+<meta property="og:url" content="${host}/${turl}" />
+<meta property="og:site_name" content="${name}" />
 ${(function() {
 return kwds.split(",").map(x=>`<meta property="article:tag" content="${x.trim()}" />
 `).join("");
@@ -155,14 +157,14 @@ return kwds.split(",").map(x=>`<meta property="article:tag" content="${x.trim()}
 <meta property="article:published_time" content="${new Date().toISOString()}" />
 <meta property="article:modified_time" content="${new Date().toISOString()}" />
 <meta property="og:updated_time" content="${new Date().toISOString()}" />
-<meta property="og:image" content="https://theabbie.web.app/${turl}.svg" />
-<meta property="og:image:secure_url" content="https://theabbie.web.app/${turl}.svg" />
+<meta property="og:image" content="${host}/${turl}.svg" />
+<meta property="og:image:secure_url" content="${host}/${turl}.svg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="627" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:description" content="${desc}" />
 <meta name="twitter:title" content="${title}" />
-<meta name="twitter:image" content="https://theabbie.web.app/${turl}.svg" />
+<meta name="twitter:image" content="${host}/${turl}.svg" />
 <!-- 
 <link rel="manifest" href="/manifest.json">
 <link rel="alternate" type="application/rss+xml" title="TheAbbie Blog" href="https://theabbie.github.io/rss.xml" />
@@ -296,18 +298,18 @@ nav[aria-label="contents"] ul {
     "@type" : "SpeakableSpecification",
     "cssSelector" : "[${title}, ${desc}]"
   },
-  "url" : "https://theabbie.web.app/${turl}"
+  "url" : "${host}/${turl}"
 },{
  "@context": "https://schema.org", 
  "@type": "Article",
  "headline": "${title}",
  "alternativeHeadline": "${title} | TheAbbie",
- "image": "https://theabbie.web.app/${turl}.svg",
+ "image": "${host}/${turl}.svg",
  "author": "Abhishek Chaudhary", 
  "editor": "Abhishek Chaudhary", 
  "genre": "Technology", 
  "keywords": "${kwds}", 
- "wordcount": "1120",
+ "wordcount": "450",
  "publisher": {
     "@type": "Organization",
     "name": "TheAbbie",
@@ -316,10 +318,10 @@ nav[aria-label="contents"] ul {
       "url": "https://theabbie.github.io/files/logo.png"
     }
   },
- "url": "https://theabbie.web.app$/{turl}",
+ "url": "${host}/${turl}",
    "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://theabbie.web.app/${turl}"
+    "@id": "${host}/${turl}"
   },
  "datePublished": "${new Date().toISOString()}",
  "dateCreated": "${new Date().toISOString()}",
@@ -333,13 +335,13 @@ nav[aria-label="contents"] ul {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://theabbie.web.app"
+        "item": "${host}"
       },${(function() {
 return seg.slice(0,seg.length-1).map((x,i)=>`{
         "@type": "ListItem",
         "position": ${i+2},
         "name": "${x.split("-").join(" ")}",
-        "item": "https://theabbie.web.app#${x}"
+        "item": "${host}#${x}"
       },
 `).join("");
 })()}{
@@ -355,9 +357,9 @@ return seg.slice(0,seg.length-1).map((x,i)=>`{
 <header>
 <nav aria-label="breadcrumb">
 <ul class="breadcrumb">
-<li><a href="https://theabbie.web.app">Home</a></li>
+<li><a href="/">Home</a></li>
 ${(function() {
-return seg.slice(0,seg.length-1).map(x=>`<li><a href="https://theabbie.web.app#${x}">${x.split("-").join(" ")}</a></li>
+return seg.slice(0,seg.length-1).map(x=>`<li><a href="/#${x}">${x.split("-").join(" ")}</a></li>
 `).join("");
 })()}<li>${title}</li>
 </ul>
