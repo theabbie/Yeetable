@@ -133,9 +133,9 @@ var make_title = function(min_length) {
 };
 
 var desc = make_title(32);
-var sec1 = make_title(5);
-var sec2 = make_title(5);
-var sec3 = make_title(5);
+var sec1 = make_title(10);
+var sec2 = make_title(10);
+var sec3 = make_title(10);
 
 var code = `<!doctype html>
 <html ⚡ lang="en">
@@ -172,9 +172,9 @@ return kwds.split(",").map(x=>`<meta property="article:tag" content="${x.trim()}
 <meta name="twitter:description" content="${desc}" />
 <meta name="twitter:title" content="${title}" />
 <meta name="twitter:image" content="${host}/${turl}.png" />
-<!-- 
 <link rel="manifest" href="/manifest.json">
-<link rel="alternate" type="application/rss+xml" title="TheAbbie Blog" href="https://theabbie.github.io/rss.xml" />
+<!--
+<link rel="alternate" type="application/rss+xml" title="Yeetable" href="${host}/rss.xml" />
 -->
 <link rel="me" href="mailto:abhishek7gg7@gmail.com" />
 <link rel="me" href="sms:+918928412138" />
@@ -316,13 +316,13 @@ nav[aria-label="contents"] ul {
  "editor": "Abhishek Chaudhary", 
  "genre": "Technology", 
  "keywords": "${kwds}", 
- "wordcount": "450",
+ "wordcount": "600",
  "publisher": {
     "@type": "Organization",
-    "name": "TheAbbie",
+    "name": "Yeetable",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://theabbie.github.io/files/logo.png"
+      "url": "${host}/assets/android-chrome-512x512.png"
     }
   },
  "url": "${host}/${turl}",
@@ -395,30 +395,30 @@ ${title}
 </nav>
 <section>
 <h2 id="one">${sec1}</h2>
-<p>${make_title(70)}</p>
+<p>${make_title(90)}</p>
 <figure>
 <amp-img src="https://picsum.photos/450/300" width="450" height="300" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec1}"></amp-img>
 <figcaption>${sec1}</figcaption>
 </figure>
-<p>${make_title(70)}</p>
+<p>${make_title(90)}</p>
 </section>
 <section>
 <h2 id="two">${sec2}</h2>
-<p>${make_title(70)}</p>
+<p>${make_title(90)}</p>
 <figure>
 <amp-img src="https://picsum.photos/500/350" width="500" height="350" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec2}"></amp-img>
 <figcaption>${sec2}</figcaption>
 </figure>
-<p>${make_title(70)}</p>
+<p>${make_title(90)}</p>
 </section>
 <section>
 <h2 id="three">${sec3}</h2>
-<p>${make_title(70)}</p>
+<p>${make_title(90)}</p>
 <figure>
 <amp-img src="https://picsum.photos/550/350" width="550" height="350" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec3}"></amp-img>
 <figcaption>${sec3}</figcaption>
 </figure>
-<p>${make_title(70)}</p>
+<p>${make_title(90)}</p>
 </section>
 </article>
 </main>
