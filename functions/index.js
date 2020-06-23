@@ -136,6 +136,10 @@ var desc = make_title(32);
 var sec1 = make_title(10);
 var sec2 = make_title(10);
 var sec3 = make_title(10);
+var sec4 = make_title(10);
+var sec5 = make_title(10);
+var sec6 = make_title(10);
+var sec7 = make_title(10);
 
 var code = `<!doctype html>
 <html ⚡ lang="en">
@@ -317,7 +321,7 @@ nav[aria-label="contents"] ul {
  "editor": "Abhishek Chaudhary", 
  "genre": "Technology", 
  "keywords": "${kwds}", 
- "wordcount": "600",
+ "wordcount": "1850",
  "publisher": {
     "@type": "Organization",
     "name": "Yeetable",
@@ -392,34 +396,74 @@ ${title}
 <li><a href="#one">${sec1}</a></li>
 <li><a href="#two">${sec2}</a></li>
 <li><a href="#three">${sec3}</a></li>
+<li><a href="#four">${sec4}</a></li>
+<li><a href="#five">${sec5}</a></li>
+<li><a href="#six">${sec6}</a></li>
+<li><a href="#seven">${sec7}</a></li>
 </ul>
 </nav>
 <section>
 <h2 id="one">${sec1}</h2>
-<p>${make_title(90)}</p>
+<p>${make_title(100)}</p>
 <figure>
 <amp-img src="https://picsum.photos/450/300" width="450" height="300" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec1}"></amp-img>
 <figcaption>${sec1}</figcaption>
 </figure>
-<p>${make_title(90)}</p>
+<p>${make_title(150)}</p>
 </section>
 <section>
 <h2 id="two">${sec2}</h2>
-<p>${make_title(90)}</p>
+<p>${make_title(100)}</p>
 <figure>
 <amp-img src="https://picsum.photos/500/350" width="500" height="350" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec2}"></amp-img>
 <figcaption>${sec2}</figcaption>
 </figure>
-<p>${make_title(90)}</p>
+<p>${make_title(150)}</p>
 </section>
 <section>
 <h2 id="three">${sec3}</h2>
-<p>${make_title(90)}</p>
+<p>${make_title(100)}</p>
 <figure>
 <amp-img src="https://picsum.photos/550/350" width="550" height="350" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec3}"></amp-img>
 <figcaption>${sec3}</figcaption>
 </figure>
-<p>${make_title(90)}</p>
+<p>${make_title(150)}</p>
+</section>
+<section>
+<h2 id="four">${sec4}</h2>
+<p>${make_title(100)}</p>
+<figure>
+<amp-img src="https://picsum.photos/600/400" width="600" height="400" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec4}"></amp-img>
+<figcaption>${sec4}</figcaption>
+</figure>
+<p>${make_title(150)}</p>
+</section>
+<section>
+<h2 id="five">${sec5}</h2>
+<p>${make_title(100)}</p>
+<figure>
+<amp-img src="https://picsum.photos/650/400" width="650" height="400" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec5}"></amp-img>
+<figcaption>${sec5}</figcaption>
+</figure>
+<p>${make_title(150)}</p>
+</section>
+<section>
+<h2 id="six">${sec6}</h2>
+<p>${make_title(100)}</p>
+<figure>
+<amp-img src="https://picsum.photos/700/450" width="700" height="450" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec6}"></amp-img>
+<figcaption>${sec6}</figcaption>
+</figure>
+<p>${make_title(150)}</p>
+</section>
+<section>
+<h2 id="seven">${sec7}</h2>
+<p>${make_title(100)}</p>
+<figure>
+<amp-img src="https://picsum.photos/750/450" width="750" height="450" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec7}"></amp-img>
+<figcaption>${sec7}</figcaption>
+</figure>
+<p>${make_title(150)}</p>
 </section>
 </article>
 </main>
