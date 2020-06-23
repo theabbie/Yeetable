@@ -140,6 +140,7 @@ var sec4 = make_title(10);
 var sec5 = make_title(10);
 var sec6 = make_title(10);
 var sec7 = make_title(10);
+var content = [...Array(35)].map((x,i)=>make_title(50));
 
 var code = `<!doctype html>
 <html ⚡ lang="en">
@@ -339,7 +340,7 @@ nav[aria-label="contents"] ul {
  "dateCreated": "${new Date().toISOString()}",
  "dateModified": "${new Date().toISOString()}",
  "description": "${desc}",
- "articleBody": "${desc}"
+ "articleBody": "${desc} ${content.join(' ')}"
  },{
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -404,66 +405,87 @@ ${title}
 </nav>
 <section>
 <h2 id="one">${sec1}</h2>
-<p>${make_title(100)}</p>
+<p>${content[0]}</p>
+<p>${content[1]}</p>
 <figure>
 <amp-img src="https://picsum.photos/450/300" width="450" height="300" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec1}"></amp-img>
 <figcaption>${sec1}</figcaption>
 </figure>
-<p>${make_title(150)}</p>
+<p>${content[2]}</p>
+<p>${content[3]}</p>
+<p>${content[4]}</p>
 </section>
 <section>
 <h2 id="two">${sec2}</h2>
-<p>${make_title(100)}</p>
+<p>${content[5]}</p>
+<p>${content[6]}</p>
 <figure>
 <amp-img src="https://picsum.photos/500/350" width="500" height="350" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec2}"></amp-img>
 <figcaption>${sec2}</figcaption>
 </figure>
-<p>${make_title(150)}</p>
+<p>${content[7]}</p>
+<p>${content[8]}</p>
+<p>${content[9]}</p>
 </section>
 <section>
 <h2 id="three">${sec3}</h2>
-<p>${make_title(100)}</p>
+<p>${content[10]}</p>
+<p>${content[11]}</p>
 <figure>
 <amp-img src="https://picsum.photos/550/350" width="550" height="350" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec3}"></amp-img>
 <figcaption>${sec3}</figcaption>
 </figure>
-<p>${make_title(150)}</p>
+<p>${content[12]}</p>
+<p>${content[13]}</p>
+<p>${content[14]}</p>
 </section>
 <section>
 <h2 id="four">${sec4}</h2>
-<p>${make_title(100)}</p>
+<p>${content[15]}</p>
+<p>${content[16]}</p>
 <figure>
 <amp-img src="https://picsum.photos/600/400" width="600" height="400" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec4}"></amp-img>
 <figcaption>${sec4}</figcaption>
 </figure>
-<p>${make_title(150)}</p>
+<p>${content[17]}</p>
+<p>${content[18]}</p>
+<p>${content[19]}</p>
 </section>
 <section>
 <h2 id="five">${sec5}</h2>
-<p>${make_title(100)}</p>
+<p>${content[20]}</p>
+<p>${content[21]}</p>
 <figure>
 <amp-img src="https://picsum.photos/650/400" width="650" height="400" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec5}"></amp-img>
 <figcaption>${sec5}</figcaption>
 </figure>
-<p>${make_title(150)}</p>
+<p>${content[22]}</p>
+<p>${content[23]}</p>
+<p>${content[24]}</p>
 </section>
 <section>
 <h2 id="six">${sec6}</h2>
-<p>${make_title(100)}</p>
+<p>${content[25]}</p>
+<p>${content[26]}</p>
 <figure>
 <amp-img src="https://picsum.photos/700/450" width="700" height="450" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec6}"></amp-img>
 <figcaption>${sec6}</figcaption>
 </figure>
-<p>${make_title(150)}</p>
+<p>${content[27]}</p>
+<p>${content[28]}</p>
+<p>${content[29]}</p>
 </section>
 <section>
 <h2 id="seven">${sec7}</h2>
-<p>${make_title(100)}</p>
+<p>${content[30]}</p>
+<p>${content[31]}</p>
 <figure>
 <amp-img src="https://picsum.photos/750/450" width="750" height="450" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec7}"></amp-img>
 <figcaption>${sec7}</figcaption>
 </figure>
-<p>${make_title(150)}</p>
+<p>${content[32]}</p>
+<p>${content[33]}</p>
+<p>${content[34]}</p>
 </section>
 </article>
 </main>
