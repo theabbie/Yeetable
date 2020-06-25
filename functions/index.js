@@ -90,7 +90,8 @@ Math.rnd = function() {
 
 String.prototype.linkify = function() {
 var arr = this.split(" ");
-return arr.slice(0,7).join(" ")+" <a href='/tag/"+ arr.slice(7,14).join("-")+"'>"+arr.slice(7,14).join(" ")+"</a> "+arr.slice(14,35).join(" ")+" <a href='/tag/"+ arr.slice(34,42).join("-")+"'>"+arr.slice(34,42).join(" ")+"</a> "+arr.slice(42,50).join(" ");
+var len = Math.ceil(Math.rnd()*7);
+return arr.slice(0,len).join(" ")+" <a href='/tag/"+ arr.slice(len,2*len).join("-")+"'>"+arr.slice(len,2*len).join(" ")+"</a> "+arr.slice(2*len,50-2*len).join(" ")+" <a href='/tag/"+ arr.slice(50-2*len,50-len).join("-")+"'>"+arr.slice(50-2*len,50-len).join(" ")+"</a> "+arr.slice(50-len,50).join(" ");
 }
 
 var src = {};
@@ -421,87 +422,87 @@ ${title}
 </nav>
 <section>
 <h2 id="one">${sec1}</h2>
-<p>${content[0]}</p>
+<p>${content[0].linkify()}</p>
 <p>${content[1].linkify()}</p>
 <figure>
 <amp-img src="https://picsum.photos/450/300" width="450" height="300" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec1}"></amp-img>
 <figcaption>${sec1}</figcaption>
 </figure>
-<p>${content[2]}</p>
+<p>${content[2].linkify()}</p>
 <p>${content[3].linkify()}</p>
-<p>${content[4]}</p>
+<p>${content[4].linkify()}</p>
 </section>
 <section>
 <h2 id="two">${sec2}</h2>
 <p>${content[5].linkify()}</p>
-<p>${content[6]}</p>
+<p>${content[6].linkify()}</p>
 <figure>
 <amp-img src="https://picsum.photos/500/350" width="500" height="350" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec2}"></amp-img>
 <figcaption>${sec2}</figcaption>
 </figure>
 <p>${content[7].linkify()}</p>
-<p>${content[8]}</p>
+<p>${content[8].linkify()}</p>
 <p>${content[9].linkify()}</p>
 </section>
 <section>
 <h2 id="three">${sec3}</h2>
-<p>${content[10]}</p>
+<p>${content[10].linkify()}</p>
 <p>${content[11].linkify()}</p>
 <figure>
 <amp-img src="https://picsum.photos/550/350" width="550" height="350" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec3}"></amp-img>
 <figcaption>${sec3}</figcaption>
 </figure>
-<p>${content[12]}</p>
+<p>${content[12].linkify()}</p>
 <p>${content[13].linkify()}</p>
-<p>${content[14]}</p>
+<p>${content[14].linkify()}</p>
 </section>
 <section>
 <h2 id="four">${sec4}</h2>
 <p>${content[15].linkify()}</p>
-<p>${content[16]}</p>
+<p>${content[16].linkify()}</p>
 <figure>
 <amp-img src="https://picsum.photos/600/400" width="600" height="400" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec4}"></amp-img>
 <figcaption>${sec4}</figcaption>
 </figure>
 <p>${content[17].linkify()}</p>
-<p>${content[18]}</p>
+<p>${content[18].linkify()}</p>
 <p>${content[19].linkify()}</p>
 </section>
 <section>
 <h2 id="five">${sec5}</h2>
-<p>${content[20]}</p>
+<p>${content[20].linkify()}</p>
 <p>${content[21].linkify()}</p>
 <figure>
 <amp-img src="https://picsum.photos/650/400" width="650" height="400" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec5}"></amp-img>
 <figcaption>${sec5}</figcaption>
 </figure>
-<p>${content[22]}</p>
+<p>${content[22].linkify()}</p>
 <p>${content[23].linkify()}</p>
-<p>${content[24]}</p>
+<p>${content[24].linkify()}</p>
 </section>
 <section>
 <h2 id="six">${sec6}</h2>
 <p>${content[25].linkify()}</p>
-<p>${content[26]}</p>
+<p>${content[26].linkify()}</p>
 <figure>
 <amp-img src="https://picsum.photos/700/450" width="700" height="450" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec6}"></amp-img>
 <figcaption>${sec6}</figcaption>
 </figure>
 <p>${content[27].linkify()}</p>
-<p>${content[28]}</p>
+<p>${content[28].linkify()}</p>
 <p>${content[29].linkify()}</p>
 </section>
 <section>
 <h2 id="seven">${sec7}</h2>
-<p>${content[30]}</p>
+<p>${content[30].linkify()}</p>
 <p>${content[31].linkify()}</p>
 <figure>
 <amp-img src="https://picsum.photos/750/450" width="750" height="450" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec7}"></amp-img>
 <figcaption>${sec7}</figcaption>
 </figure>
-<p>${content[32]}</p>
+<p>${content[32].linkify()}</p>
 <p>${content[33].linkify()}</p>
-<p>${content[34]}</p>
+<p>${content[34].linkify()}</p>
 </section>
 </article>
 </main>
