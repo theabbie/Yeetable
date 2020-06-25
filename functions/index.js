@@ -90,8 +90,8 @@ Math.rnd = function() {
 
 String.prototype.linkify = function() {
 var arr = this.split(" ");
-var len = Math.ceil(Math.rnd()*7);
-return arr.slice(0,len).join(" ")+" <a href='/tag/"+ arr.slice(len,2*len).join("-")+"'>"+arr.slice(len,2*len).join(" ")+"</a> "+arr.slice(2*len,50-2*len).join(" ")+" <a href='/tag/"+ arr.slice(50-2*len,50-len).join("-")+"'>"+arr.slice(50-2*len,50-len).join(" ")+"</a> "+arr.slice(50-len,50).join(" ");
+var len = 4+Math.floor(Math.rnd()*4);
+return arr.slice(0,len+5).join(" ")+" <a href='/tag/"+ arr.slice(len+5,2*len+5).join("-")+"'>"+arr.slice(len+5,2*len+5).join(" ")+"</a> "+arr.slice(2*len+5,45-2*len).join(" ")+" <a href='/tag/"+ arr.slice(45-2*len,45-len).join("-")+"'>"+arr.slice(45-2*len,45-len).join(" ")+"</a> "+arr.slice(45-len,50).join(" ");
 }
 
 var src = {};
