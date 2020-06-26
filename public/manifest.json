@@ -4,16 +4,16 @@
   "prefer_related_applications": false,
   "icons": [
     {
-      "src":"https://yeetable.tk/assets/android-chrome-192x192.png",
+      "src":"https://yeetable.web.app/assets/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },{
-      "src":"https://yeetable.tk/assets/android-chrome-512x512.png",
+      "src":"https://yeetable.web.app/assets/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "https://yeetable.tk",
+  "start_url": "https://yeetable.web.app",
   "background_color": "#ffffff",
   "Theme_color": "#ffffff",
   "display": "standalone"
