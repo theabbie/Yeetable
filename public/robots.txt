@@ -1,4 +1,4 @@
 User-Agent: *
 Disallow: 
 
-Sitemap: https://yeetable.tk/sitemap.xml
+Sitemap: https://yeetable.web.app/sitemap.xml
