@@ -68,6 +68,8 @@ tti.generate(title,{maxWidth: 1200, customHeight: 627, fontSize: 75, margin: 75,
 
 exports.markov = functions.https.onRequest((req, res) => {
 
+if (req.hostname.endsWith(".tk")) res.redirect(301, "https://yeetable.web.app" + req.url);
+
 var host = "https://yeetable.web.app";
 var name = "Yeetable";
 var u = url.parse(req.url,true);
