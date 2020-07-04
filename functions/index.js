@@ -52,10 +52,6 @@ exports.save = functions.https.onCall((data, context) => {
  })
 });
 
-exports.sitemap = functions.https.onRequest((req, res) => {
-  var sitemap = url.parse(req.url,true).pathname.substring(9);
-});
-
 exports.img = functions.https.onRequest((req, res) => {
 
 var title = url.parse(req.url,true).pathname.replace(/^\/+|\/+$/g, '').split(/\/+/g).reverse()[0].split("-").join(" ").split(".")[0];
