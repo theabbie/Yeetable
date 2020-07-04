@@ -14,9 +14,6 @@
     "source": "/post",
     "function": "post"
     },{
-    "source": "/sitemap/**",
-    "function": "sitemap"
-    },{
     "source": "**/*.png",
     "function": "img"
     },{
