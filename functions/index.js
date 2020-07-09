@@ -407,7 +407,7 @@ return seg.slice(0,seg.length-1).map(x=>`<li><a href="/#${x}">${x.split("-").joi
 ${title}
 </h1>
 <aside>
-<p>By <a href="mailto:abhishek7gg7@gmail.com" rel="author">Abhishek Chaudhary</a></p>
+<p>By <a href="https://theabbie.github.io" rel="author">Abhishek Chaudhary</a></p>
 <p><strong>Published</strong> ${new Date().toISOString().split("T")[0]}</p>
 </aside>
 <p><i>${desc}</i></p>
