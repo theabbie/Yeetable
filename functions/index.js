@@ -323,6 +323,7 @@ nav[aria-label="contents"] ul {
 }
 </style>
 <script async src="https://cdn.ampproject.org/v0.js"></`+`script>
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"><`+`/script>
 <script type="application/ld+json">
 [{
   "@context" : "https://schema.org",
@@ -429,6 +430,11 @@ ${title}
 <section>
 <h2 id="one">${sec1}</h2>
 <p>${content[0].linkify()}</p>
+<p>
+<amp-ad width="100vw" height="320" type="adsense" data-ad-client="ca-pub-2455012527087318" data-ad-slot="2282099828" data-auto-format="rspv" data-full-width="">
+<div overflow=""></div>
+</amp-ad>
+</p>
 <p>${content[1].linkify()}</p>
 <figure>
 <amp-img src="https://picsum.photos/450/300" width="450" height="300" layout="responsive" sizes="(min-width: 500px) 500px, 80vw" alt="${sec1}"></amp-img>
