@@ -68,7 +68,7 @@ tti.generate(title,{maxWidth: 1200, customHeight: 627, fontSize: 75, margin: 75,
 
 exports.markov = functions.https.onRequest((req, res) => {
 
-var host = "https://yeetable.web.app";
+var host = req.hostname.indexOf("abbie")!=-1?"https://abbie.ml":"https://yeetable.web.app";
 var name = "Yeetable";
 var u = url.parse(req.url,true);
 var turl = u.pathname.replace(/^\/+|\/+$/g, '').replace(/\/+/g,'/');
